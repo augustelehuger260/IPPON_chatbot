@@ -25,7 +25,9 @@
     "clientFramework": "angularX",
     "useSass": false,
     "clientPackageManager": "yarn",
-    "testFrameworks": [],
+    "testFrameworks": [
+      "cucumber"
+    ],
     "jhiPrefix": "jhi",
     "enableTranslation": false
   }
