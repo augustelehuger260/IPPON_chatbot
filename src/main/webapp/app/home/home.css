@@ -10,6 +10,14 @@ Main page styles
     background-size: contain;
 }
 
+.logo {
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    background: url('../../content/images/logo-ippon.jpg') no-repeat center top;
+    background-size: contain;
+}
+
 /* wait autoprefixer update to allow simple generation of high pixel density media query */
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min--moz-device-pixel-ratio: 2),

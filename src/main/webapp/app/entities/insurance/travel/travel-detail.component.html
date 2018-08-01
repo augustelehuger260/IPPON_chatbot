@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="travel">
+            <h2><span>Travel</span> {{travel.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Country Arrival</span></dt>
+                <dd>
+                    <span>{{travel.countryArrival}}</span>
+                </dd>
+                <dt><span>Departure Date</span></dt>
+                <dd>
+                    <span>{{travel.departureDate}}</span>
+                </dd>
+                <dt><span>Return Date</span></dt>
+                <dd>
+                    <span>{{travel.returnDate}}</span>
+                </dd>
+                <dt><span>Traveler Age</span></dt>
+                <dd>
+                    <span>{{travel.travelerAge}}</span>
+                </dd>
+                <dt><span>State Departure</span></dt>
+                <dd>
+                    <span>{{travel.stateDeparture}}</span>
+                </dd>
+                <dt><span>Insurance Id</span></dt>
+                <dd>
+                    <span>{{travel.insuranceId}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/travel', travel.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

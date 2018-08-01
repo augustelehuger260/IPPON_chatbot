@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-insurance-plan-heading">Create or edit a Insurance Plan</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!insurancePlan.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="insurancePlan.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                        [(ngModel)]="insurancePlan.name" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_price">Price</label>
+                    <input type="number" class="form-control" name="price" id="field_price"
+                        [(ngModel)]="insurancePlan.price" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_tripCancellation">Trip Cancellation</label>
+                    <input type="number" class="form-control" name="tripCancellation" id="field_tripCancellation"
+                        [(ngModel)]="insurancePlan.tripCancellation" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_emergencyTransportation">Emergency Transportation</label>
+                    <input type="number" class="form-control" name="emergencyTransportation" id="field_emergencyTransportation"
+                        [(ngModel)]="insurancePlan.emergencyTransportation" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_bagageLost">Bagage Lost</label>
+                    <input type="number" class="form-control" name="bagageLost" id="field_bagageLost"
+                        [(ngModel)]="insurancePlan.bagageLost" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_conciergeService">Concierge Service</label>
+                    <input type="checkbox" class="form-control" name="conciergeService" id="field_conciergeService"
+                        [(ngModel)]="insurancePlan.conciergeService" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
