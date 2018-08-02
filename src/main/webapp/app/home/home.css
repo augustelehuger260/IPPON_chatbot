@@ -12,9 +12,9 @@ Main page styles
 
 .logo {
     display: inline-block;
-    width: 300px;
+    width: 200px;
     height: 200px;
-    background: url('../../content/images/logo-ippon.jpg') no-repeat center top;
+    background: url('../../content/images/logo-ippon.png') no-repeat center top;
     background-size: contain;
 }
 

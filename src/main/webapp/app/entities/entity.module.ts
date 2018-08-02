@@ -11,6 +11,7 @@ import { GatewayInsurancePlanModule as InsuranceInsurancePlanModule } from './in
         InsuranceInsurancePlanModule,
         /* jhipster-needle-add-entity-module - JHipster will add entity modules here */
     ],
+    exports: [InsuranceTravelModule],
     declarations: [],
     entryComponents: [],
     providers: [],

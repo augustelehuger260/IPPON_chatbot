@@ -10,7 +10,7 @@
                         [(ngModel)]="travel.id" readonly />
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" for="field_countryArrival">Country Arrival</label>
+                    <label class="form-control-label" for="field_countryArrival">Country of Destination</label>
                     <input type="text" class="form-control" name="countryArrival" id="field_countryArrival"
                         [(ngModel)]="travel.countryArrival" />
                 </div>
@@ -35,21 +35,15 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" for="field_travelerAge">Traveler Age</label>
+                    <label class="form-control-label" for="field_travelerAge">Age of Traveler</label>
                     <input type="number" class="form-control" name="travelerAge" id="field_travelerAge"
                         [(ngModel)]="travel.travelerAge" />
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" for="field_stateDeparture">State Departure</label>
+                    <label class="form-control-label" for="field_stateDeparture">State of Residency</label>
                     <input type="text" class="form-control" name="stateDeparture" id="field_stateDeparture"
                         [(ngModel)]="travel.stateDeparture" />
-                </div>
-                <div class="form-group">
-                    <label class="form-control-label" for="field_insuranceId">Insurance Id</label>
-                    <input type="number" class="form-control" name="insuranceId" id="field_insuranceId"
-                        [(ngModel)]="travel.insuranceId" />
-                </div>
-
+                </div>                
             </div>
             <div>
                 <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">

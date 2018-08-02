@@ -16,6 +16,7 @@ const ENTITY_STATES = [...travelRoute, ...travelPopupRoute];
 
 @NgModule({
     imports: [GatewaySharedModule, RouterModule.forChild(ENTITY_STATES)],
+    exports:[TravelComponent],
     declarations: [TravelComponent, TravelDetailComponent, TravelUpdateComponent, TravelDeleteDialogComponent, TravelDeletePopupComponent],
     entryComponents: [TravelComponent, TravelUpdateComponent, TravelDeleteDialogComponent, TravelDeletePopupComponent],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
